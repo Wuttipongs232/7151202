@@ -216,7 +216,7 @@ nav a:hover {
 }
 
 .check {
-  color: rgb(148, 12, 12);
+  color: rgb(247, 247, 247);
   font-weight: bold;
   font-size: 24px;
   border-radius: 50%;
@@ -242,7 +242,8 @@ nav a:hover {
   
   display: flex;                
   align-items: flex-start;       
-  gap: 20px;                    
+  gap: 20px;   
+  color: #7d2727;                 
 }
 
 .tip-box-icon {
