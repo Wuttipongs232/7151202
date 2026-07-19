@@ -11,16 +11,12 @@ body {
     line-height: 1.6;
 }
 
-footer,
-/* .hero, */
-/* .card, */
-.tip-box {
-    border: 1px solid #ff0000;
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
+footer {
+  border: 1px solid red;
+  background-color: #ebf8ff;
+  margin: 20px;
+  padding: 20px;
 }
-
 /* ================================
               Header
 =================================== */
@@ -61,7 +57,7 @@ nav a:hover {
     display: flex;
     gap: 10px;
 
-    padding: 40px;
+    padding: 45px;
 }
 
 .hero-icon {
@@ -83,7 +79,6 @@ nav a:hover {
 
 }
 
-.hero-text {}
 
 .hero-text h1 {
     font-size: 40px;
@@ -118,16 +113,15 @@ nav a:hover {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #fbf2f2;
 
     border-radius: 16px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
-    border: 1px solid #7f86cd;
+    border: 1px solid #3055a6;
 
     /* padding: 20px; */
     overflow: hidden;
     
-
 }
 
 .card-header {
@@ -150,6 +144,14 @@ nav a:hover {
   justify-content: center;
   align-items: center;
 
+}
+
+.purple-bg {
+  background-color: rgb(154, 0, 154);
+}
+
+.purple-text {
+  color: rgb(154, 0, 154);
 }
 
 .card-body {
@@ -205,4 +207,58 @@ nav a:hover {
   color: rgb(158, 157, 157);
   display: inline-block;
   width: 20px;
+}
+
+/* card3 */
+.activity-list {list-style: none;}
+.activity-list li {
+  margin-bottom: 20px;
+}
+
+.check {
+  color: rgb(148, 12, 12);
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 38px;
+  width: 38px;
+  justify-content: center;
+  align-items: center;
+}
+.check-blue { background-color: #384aaa; }
+.check-red { background-color: #d93434; }
+.check-orange { background-color: #ee9945; }
+.check-pink { background-color: #e74bb3; }
+.check-green { background-color: #3fd332; }
+
+/* tipbox*/
+.tip-box {
+  background-color: #fffdec;
+  border: 1px solid #ffcc00;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 20px;
+  
+  display: flex;                
+  align-items: flex-start;       
+  gap: 20px;                    
+}
+
+.tip-box-icon {
+  background-color: #ffbb00;    
+  font-size: 26px;               
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;            
+  display: inline-flex;
+  justify-content: center;      
+  align-items: center;           
+  flex-shrink: 0;               
+}
+
+.tip-box code {
+  color: #ff0000;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
