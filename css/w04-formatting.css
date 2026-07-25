@@ -11,12 +11,16 @@ body {
     line-height: 1.6;
 }
 
-footer {
-  border: 1px solid red;
-  background-color: #ebf8ff;
-  margin: 20px;
-  padding: 20px;
-}
+/* footer {
+  background-color: rgb(6, 6, 155);
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
 /* ================================
               Header
 =================================== */
@@ -263,3 +267,52 @@ nav a:hover {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+footer {
+    background-color: #0b1f4d;
+    color: #ffffff;
+    padding: 50px
+}
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+        }
+.footer-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.footer-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d0d7de;
+    margin-bottom: 15px;
+}
+.footer-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-card ul li {
+    font-size: 14px;
+    color: #d0d7de;
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgb(105, 105, 105);
+    text-align: center;
+    font-size: 12px;
+    color: #b0bac5;
+}
+  
