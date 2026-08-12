@@ -1,318 +1,487 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  /* บังคับให้ขนาดความกว้างและความสูงรวม padding และ border ไว้ในตัว */
+  margin: 0;
+  /* ล้างค่าระยะขอบนอกเริ่มต้นทั้งหมดของทุกแท็ก */
+  padding: 0;
+  /* ล้างค่าระยะขอบในเริ่มต้นทั้งหมดของทุกแท็ก */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ebf8ff;
-    
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  /* กำหนดฟอนต์หลักเป็น Arial และฟอนต์สำรอง sans-serif */
+  background-color: #ebf8ff;
+  /* สีพื้นหลังของหน้าเว็บเป็นสีฟ้าอ่อนพาสเทล */
+  line-height: 1.6;
+  /* ระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
 }
 
-/* footer {
-  background-color: rgb(6, 6, 155);
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* (ส่วนของ footer ตัวเลือกที่ถูกคอมเมนต์ไว้ไม่ได้ใช้งาน) */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 /* ================================
-              Header
+            Header
 =================================== */
 header {
-    background: linear-gradient(to right, #0036aa, #325bfc);
-    padding: 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: linear-gradient(to right, #0036aa, #325bfc);
+  /* พื้นหลังไล่ระดับสีฟ้าเข้มไปฟ้าสว่าง */
+  padding: 20px;
+  /* เว้นระยะด้านใน 20 พิกเซล */
+  color: white;
+  /* ตัวอักษรสีขาว */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* ใส่เงาบางๆ ด้านล่าง header */
+  display: flex;
+  /* ใช้ Flexbox จัดเรียงแนวนอน */
+  justify-content: space-between;
+  /*กระจายเนื้อหาชิดซ้าย-ขวา */
+  align-items: center;
+  /* จัดให้อยู่กึ่งกลางแนวตั้ง */
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  /* จัดโลโก้และข้อความแบรนด์ให้อยู่แนวนอน */
+  align-items: center;
+  /* จัดกึ่งกลางแนวตั้ง */
+  gap: 10px;
+  /* ระยะห่างระหว่างไอคอนกับข้อความแบรนด์ 10 พิกเซล */
 }
 
-.brand-icon { font-size: 50px; }
-.brand-text p { font-size: 14px}
+.brand-icon {
+  font-size: 50px;
+}
+
+/* ขนาดไอคอนแบรนด์ 50 พิกเซล */
+.brand-text p {
+  font-size: 14px;
+}
+
+/* ขนาดตัวอักษรย่อหน้าแบรนด์ 14 พิกเซล */
 
 /* navigation */
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+  color: white;
+  /* ลิงก์เมนูสีขาว */
+  text-decoration: none;
+  /* เอาเส้นใต้ออก */
+  margin-left: 20px;
+  /* เว้นระยะห่างด้านซ้ายของแต่ละลิงก์ 20 พิกเซล */
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  /* แสดงเส้นใต้เมื่อเอาเมาส์ชี้ */
 }
-
 
 /* hero section */
 .hero {
-    display: flex;
-    gap: 10px;
-
-    padding: 45px;
+  display: flex;
+  /* จัดเรียงส่วนฮีโร่แบบ Flexbox */
+  gap: 10px;
+  /* ระยะห่างระหว่างไอคอนและข้อความฮีโร่ 10 พิกเซล */
+  padding: 45px;
+  /* เว้นระยะด้านในรอบทิศทาง 45 พิกเซล */
 }
 
 .hero-icon {
-    background-color: #325bfc;
-    color: #fff;
-    border-radius: 15px;
-
-    width: 90px;
-    height: 90px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 40px;
-    font-weight: bold;
-
-    
-
+  background-color: #325bfc;
+  /* พื้นหลังไอคอนฮีโร่สีฟ้า */
+  color: #fff;
+  /* ตัวอักษร/ไอคอนสีขาว */
+  border-radius: 15px;
+  /* มุมโค้งมน 15 พิกเซล */
+  width: 90px;
+  /* ความกว้าง 90 พิกเซล */
+  height: 90px;
+  /* ความสูง 90 พิกเซล */
+  display: flex;
+  /* จัดเนื้อหาข้างในกึ่งกลาง */
+  justify-content: center;
+  /* จัดกึ่งกลางแนวนอน */
+  align-items: center;
+  /* จัดกึ่งกลางแนวตั้ง */
+  font-size: 40px;
+  /* ขนาดตัวอักษร 40 พิกเซล */
+  font-weight: bold;
+  /* ตัวหนา */
 }
 
-
 .hero-text h1 {
-    font-size: 40px;
-    color: #1a2d78;
+  font-size: 40px;
+  /* ขนาดหัวข้อฮีโร่ 40 พิกเซล */
+  color: #1a2d78;
+  /* สีน้ำเงินเข้ม */
 }
 
 .hero-text p {
-    font-size: 20px;
-    color: #474748;
+  font-size: 20px;
+  /* ขนาดตัวอักษรย่อหน้าฮีโร่ 20 พิกเซล */
+  color: #474748;
+  /* สีเทาเข้ม */
 }
-
 
 /* Main content */
-
 .container {
-    /* max-width: 1200px; */
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px;
-
-    /* background-color: #9ca4bd; */
+  width: 100%;
+  /* ความกว้างเต็ม 100% */
+  margin: 0 auto;
+  /* จัดกึ่งกลางแนวนอน */
+  padding: 40px;
+  /* เว้นระยะด้านใน 40 พิกเซล */
 }
 
-
 .card-grid {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    /* background-color: #fffb2c; */
+  display: grid;
+  /* จัดเรียงแบบ Grid (กริด) */
+  grid-template-columns: repeat(3, 1fr);
+  /* แบ่งเป็น 3 คอลัมน์เท่าๆ กัน */
+  gap: 20px;
+  /* ระยะห่างระหว่างการ์ด 20 พิกเซล */
 }
 
 .card {
-    background-color: #fbf2f2;
-
-    border-radius: 16px;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
-    border: 1px solid #3055a6;
-
-    /* padding: 20px; */
-    overflow: hidden;
-    
+  background-color: #fbf2f2;
+  /* พื้นหลังการ์ดสีขาวอมชมพูจางๆ */
+  border-radius: 16px;
+  /* มุมโค้งมนของการ์ด 16 พิกเซล */
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
+  /* ใส่เงาเบาๆ */
+  border: 1px solid #3055a6;
+  /* ขอบการ์ดสีฟ้าเข้ม */
+  overflow: hidden;
+  /* ซ่อนเนื้อหาที่ล้นขอบโค้ง */
 }
 
 .card-header {
   background-color: #c6cce9;
+  /* พื้นหลังหัวการ์ดสีฟ้าเทาอ่อน */
   font-size: 18px;
+  /* ขนาดตัวอักษร 18 พิกเซล */
   font-weight: bold;
+  /* ตัวหนา */
   padding: 20px;
+  /* เว้นระยะด้านใน 20 พิกเซล */
   border-bottom: 1px solid #7f86cd;
-
+  /* เส้นคั่นด้านล่างหัวการ์ด */
 }
 
 .card-header-icon {
   background-color: #0036aa;
+  /* พื้นหลังไอคอนหัวการ์ดสีน้ำเงินเข้ม */
   color: white;
-  /* padding: 10px; */
+  /* สีไอคอนสีขาว */
   border-radius: 50%;
+  /* ทำเป็นรูปวงกลม */
   width: 38px;
+  /* ความกว้าง 38 พิกเซล */
   height: 38px;
+  /* ความสูง 38 พิกเซล */
   display: inline-flex;
+  /* จัดกึ่งกลางด้วย Flexbox แบบ inline */
   justify-content: center;
+  /* จัดกึ่งกลางแนวนอน */
   align-items: center;
-
+  /* จัดกึ่งกลางแนวตั้ง */
 }
 
 .purple-bg {
   background-color: rgb(154, 0, 154);
+  /* คลาสเสริมสำหรับเปลี่ยนพื้นหลังเป็นสีม่วง */
 }
 
 .purple-text {
   color: rgb(154, 0, 154);
+  /* คลาสเสริมสำหรับเปลี่ยนสีข้อความ เป็นสีม่วง */
 }
 
 .card-body {
   padding: 20px;
-
+  /* เว้นระยะด้านในเนื้อหาการ์ด 20 พิกเซล */
 }
+
 .format-row {
   display: grid;
+  /* จัดเรียงแบบ Grid ภายในแถวข้อมูล */
   grid-template-columns: 100px 1fr;
-  
+  /* แบ่ง 2 คอลัมน์: ป้ายกำกับ 100px และเนื้อหาที่เหลือ */
+  gap: 20px;
+  /* ระยะห่าง 20 พิกเซล */
+  border-bottom: 1px solid #5b76b1;
+  /* เส้นขอบด้านล่างแต่ละแถว */
   margin-bottom: 8px;
-  gap: 20px;  
-  border-bottom:1px solid #5b76b1 ;
-  margin-bottom: 8px;
-  padding: 6px 0;;
-  
+  /* เว้นระยะด้านล่าง 8 พิกเซล */
+  padding: 6px 0;
+  /* เว้นระยะด้านบน-ล่าง 6 พิกเซล */
 }
 
 .label {
   background-color: #325bfc;
-  /* padding: 8px 50px; */
+  /* พื้นหลังป้ายกำกับเริ่มต้นสีฟ้า */
   border-radius: 80px;
-  
+  /* ทำมุมโค้งมนแบบแคปซูล */
   color: #ebf8ff;
+  /* ตัวอักษรสีฟ้าอ่อน */
   font-weight: bold;
+  /* ตัวหนา */
   text-align: center;
-  
+  /* จัดข้อความกึ่งกลาง */
 }
-.b-label {background-color: #325bfc;}
-.strong-label {background-color: #ff0000;}
-.i-label {background-color: #ddaa1c;}
-.em-label {background-color: #0b9248;}
-.u-label {background-color: #6e1651;}
-.mark-label {background-color: #195570;}
-.small-label {background-color: #26940a;}
-.del-label {background-color: #195570;}
-.sup-label {background-color: #9c4fa3;}
-.sub-label {background-color: #c9770c;}
+
+/* สีป้ายกำกับแต่ละรูปแบบแท็ก HTML */
+.b-label {
+  background-color: #325bfc;
+}
+
+.strong-label {
+  background-color: #ff0000;
+}
+
+.i-label {
+  background-color: #ddaa1c;
+}
+
+.em-label {
+  background-color: #0b9248;
+}
+
+.u-label {
+  background-color: #6e1651;
+}
+
+.mark-label {
+  background-color: #195570;
+}
+
+.small-label {
+  background-color: #26940a;
+}
+
+.del-label {
+  background-color: #195570;
+}
+
+.sup-label {
+  background-color: #9c4fa3;
+}
+
+.sub-label {
+  background-color: #c9770c;
+}
 
 /* card2 */
-
 .pre-box {
   background-color: black;
+  /* พื้นหลังบล็อกโค้ดสีดำ */
   border-radius: 10px;
+  /* มุมโค้งมน 10 พิกเซล */
   color: white;
+  /* ตัวอักษรสีขาว */
   padding: 20px;
+  /* เว้นระยะด้านใน 20 พิกเซล */
 }
+
 .html-tag {
   color: red;
-
+  /* สีข้อความแท็ก HTML เป็นสีแดง */
 }
+
 .line-no {
   color: rgb(158, 157, 157);
+  /* สีตัวเลขบรรทัดเป็นสีเทา */
   display: inline-block;
+  /* จัดให้แสดงผลแบบบล็อกอินไลน์ */
   width: 20px;
+  /* กำหนดความกว้างคงที่ 20 พิกเซลเพื่อจัดแนวตัวเลขให้ตรงกัน */
 }
 
 /* card3 */
-.activity-list {list-style: none;}
+.activity-list {
+  list-style: none;
+}
+
+/* เอาจุดนำหน้าวงกลมของรายการออก */
 .activity-list li {
   margin-bottom: 20px;
+  /* เว้นระยะห่างด้านล่างแต่ละรายการ 20 พิกเซล */
 }
 
 .check {
   color: rgb(247, 247, 247);
+  /* ตัวอักษรเครื่องหมายติ๊กถูกสีขาว */
   font-weight: bold;
+  /* ตัวหนา */
   font-size: 24px;
+  /* ขนาดไอคอน 24 พิกเซล */
   border-radius: 50%;
+  /* ทำเป็นรูปวงกลม */
   display: inline-flex;
+  /* จัดกึ่งกลางด้วย Flexbox แบบ inline */
   height: 38px;
+  /* ความสูง 38 พิกเซล */
   width: 38px;
+  /* ความกว้าง 38 พิกเซล */
   justify-content: center;
+  /* จัดกึ่งกลางแนวนอน */
   align-items: center;
+  /* จัดกึ่งกลางแนวตั้ง */
 }
-.check-blue { background-color: #384aaa; }
-.check-red { background-color: #d93434; }
-.check-orange { background-color: #ee9945; }
-.check-pink { background-color: #e74bb3; }
-.check-green { background-color: #3fd332; }
 
-/* tipbox*/
+/* สีพื้นหลังปุ่มเช็คในรายการกิจกรรม */
+.check-blue {
+  background-color: #384aaa;
+}
+
+.check-red {
+  background-color: #d93434;
+}
+
+.check-orange {
+  background-color: #ee9945;
+}
+
+.check-pink {
+  background-color: #e74bb3;
+}
+
+.check-green {
+  background-color: #3fd332;
+}
+
+/* tipbox */
 .tip-box {
   background-color: #fffdec;
+  /* พื้นหลังกล่องคำแนะนำสีเหลืองครีม */
   border: 1px solid #ffcc00;
+  /* ขอบสีเหลืองทอง */
   border-radius: 12px;
+  /* มุมโค้งมน 12 พิกเซล */
   margin: 20px;
+  /* เว้นระยะขอบรอบกล่อง 20 พิกเซล */
   padding: 20px;
-  
-  display: flex;                
-  align-items: flex-start;       
-  gap: 20px;   
-  color: #7d2727;                 
+  /* เว้นระยะด้านใน 20 พิกเซล */
+  display: flex;
+  /* จัดเรียงไอคอนและข้อความแนวนอน */
+  align-items: flex-start;
+  /* จัดชิดด้านบนในแนวตั้ง */
+  gap: 20px;
+  /* ระยะห่างระหว่างไอคอนและข้อความ 20 พิกเซล */
+  color: #7d2727;
+  /* สีตัวอักษรโทนแดงเข้ม */
 }
 
 .tip-box-icon {
-  background-color: #ffbb00;    
-  font-size: 26px;               
+  background-color: #ffbb00;
+  /* พื้นหลังไอคอนแจ้งเตือนสีเหลือง */
+  font-size: 26px;
+  /* ขนาดไอคอน 26 พิกเซล */
   width: 50px;
+  /* ความกว้าง 50 พิกเซล */
   height: 50px;
-  border-radius: 50%;            
+  /* ความสูง 50 พิกเซล */
+  border-radius: 50%;
+  /* ทำเป็นรูปวงกลม */
   display: inline-flex;
-  justify-content: center;      
-  align-items: center;           
-  flex-shrink: 0;               
+  /* จัดกึ่งกลางด้วย Flexbox แบบ inline */
+  justify-content: center;
+  /* จัดกึ่งกลางแนวนอน */
+  align-items: center;
+  /* จัดกึ่งกลางแนวตั้ง */
+  flex-shrink: 0;
+  /* ป้องกันไม่ให้ไอคอนถูกบีบขนาดลง */
 }
 
 .tip-box code {
   color: #ff0000;
+  /* สีข้อความโค้ดภายในกล่องคำแนะนำเป็นสีแดง */
   font-weight: bold;
+  /* ตัวหนา */
   font-family: Arial, Helvetica, sans-serif;
+  /* กำหนดฟอนต์ */
 }
 
+/* footer */
 footer {
-    background-color: #0b1f4d;
-    color: #ffffff;
-    padding: 50px
+  background-color: #0b1f4d;
+  /* พื้นหลังส่วนท้ายเว็บสีน้ำเงินเข้มมาก */
+  color: #ffffff;
+  /* ตัวอักษรสีขาว */
+  padding: 50px;
+  /* เว้นระยะด้านใน 50 พิกเซล */
 }
+
 footer a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  /* เอาเส้นใต้ลิงก์ออก */
+  color: #ffffff;
+  /* ลิงก์สีขาว */
 }
+
 .footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 60px;
-    max-width: 1200px;
-    margin: auto;
-        }
+  display: grid;
+  /* จัดเรียงคอลัมน์ footer แบบ Grid */
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  /* แบ่งเป็น 4 คอลัมน์ (คอลัมน์แรกกว้างเป็น 2 เท่า) */
+  gap: 60px;
+  /* ระยะห่างระหว่างคอลัมน์ 60 พิกเซล */
+  max-width: 1200px;
+  /* จำกัดความกว้างสูงสุด 1200 พิกเซล */
+  margin: auto;
+  /* จัดกึ่งกลางแนวนอน */
+}
+
 .footer-card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-size: 18px;
+  /* ขนาดหัวข้อการ์ด footer 18 พิกเซล */
+  font-weight: 600;
+  /* ความหนาตัวอักษรระดับ 600 */
+  margin-bottom: 20px;
+  /* เว้นระยะด้านล่าง 20 พิกเซล */
+  color: #ffffff;
+  /* หัวข้อสีขาว */
 }
+
 .footer-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #d0d7de;
-    margin-bottom: 15px;
+  font-size: 14px;
+  /* ขนาดตัวอักษรย่อหน้า footer 14 พิกเซล */
+  line-height: 1.6;
+  /* ระยะห่างระหว่างบรรทัด */
+  color: #d0d7de;
+  /* สีเทาอ่อน */
+  margin-bottom: 15px;
+  /* เว้นระยะด้านล่าง 15 พิกเซล */
 }
+
 .footer-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  /* เอาจุดสัญลักษณ์รายการออก */
+  padding: 0;
+  /* ล้างค่า padding */
+  margin: 0;
+  /* ล้างค่า margin */
 }
+
 .footer-card ul li {
-    font-size: 14px;
-    color: #d0d7de;
-    margin-bottom: 10px;
+  font-size: 14px;
+  /* ขนาดตัวอักษรรายการ 14 พิกเซล */
+  color: #d0d7de;
+  /* สีเทาอ่อน */
+  margin-bottom: 10px;
+  /* เว้นระยะด้านล่างแต่ละรายการ 10 พิกเซล */
 }
+
 .footer-bottom {
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid rgb(105, 105, 105);
-    text-align: center;
-    font-size: 12px;
-    color: #b0bac5;
+  max-width: 1200px;
+  /* จำกัดความกว้างสูงสุด 1200 พิกเซล */
+  margin: 40px auto 0 auto;
+  /* เว้นระยะด้านบน 40 พิกเซล และจัดกึ่งกลางแนวนอน */
+  padding-top: 20px;
+  /* เว้นระยะด้านบน 20 พิกเซล */
+  border-top: 1px solid rgb(105, 105, 105);
+  /* เส้นคั่นด้านบนสีเทา */
+  text-align: center;
+  /* จัดข้อความกึ่งกลาง */
+  font-size: 12px;
+  /* ขนาดตัวอักษรเล็ก 12 พิกเซล */
+  color: #b0bac5;
+  /* สีเทาอมฟ้า */
 }
-  

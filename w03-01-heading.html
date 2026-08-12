@@ -8,42 +8,66 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            /* กำหนดฟอนต์หลักเป็น Arial และใช้ sans-serif สำรอง */
             background-color: rgb(118, 112, 219);
+            /* สีพื้นหลังของหน้าเว็บเป็นสีม่วง */
             margin: 30px;
+            /* เว้นระยะขอบรอบหน้าจอ 30 พิกเซล */
             line-height: 1.6;
+            /* กำหนดระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
         }
+
         .container {
             max-width: 700px;
+            /* จำกัดความกว้างสูงสุดของคอนเทนเนอร์ไม่เกิน 700 พิกเซล */
             margin: 0 auto;
+            /* จัดกึ่งกลางคอนเทนเนอร์ในแนวนอน */
         }
 
         .text-title {
             color: rgb(13, 38, 107);
+            /* กำหนดสีข้อความหัวข้อเป็นสีน้ำเงินเข้ม */
         }
 
         .text-center {
             text-align: center;
+            /* คลาสสำเร็จรูปสำหรับจัดข้อความให้อยู่กึ่งกลาง */
         }
 
         .card {
             background-color: rgb(255, 255, 255);
+            /* สีพื้นหลังของการ์ดเป็นสีขาว */
             padding: 20px;
+            /* เว้นระยะห่างด้านในของการ์ด 20 พิกเซล */
             border-radius: 15px;
+            /* ทำมุมโค้งมนของการ์ด 15 พิกเซล */
             box-shadow: 0 4px px rgba(233, 102, 102, 0.521);
-            margin-bottom: 20px
+            /* (หมายเหตุ: มีค่าพิกเซลขาดหายตรงเงาแนวแกน Y) ใส่เงาให้กับการ์ด */
+            margin-bottom: 20px;
+            /* เว้นระยะห่างด้านล่างของการ์ดแต่ละอัน 20 พิกเซล */
         }
+
         pre {
             background-color: aliceblue;
+            /* สีพื้นหลังของแท็ก pre เป็นสีฟ้าอ่อนมากๆ */
             border-left: 4px solid red;
+            /* เพิ่มเส้นขอบด้านซ้ายสีแดง หนา 4 พิกเซล */
             padding-top: 10px;
+            /* เว้นระยะห่างด้านบนด้านใน 10 พิกเซล */
             font-size: 16px;
+            /* กำหนดขนาดตัวอักษร 16 พิกเซล */
         }
+
         .note {
             color: #161f9b;
+            /* สีตัวอักษรสำหรับคลาส note เป็นสีน้ำเงิน */
             background-color: rgb(37, 182, 192);
+            /* สีพื้นหลังเป็นสีฟ้าอมเขียว */
         }
+
         .note::before {
             content: "📌";
+            /* เติมอีโมจิหมุดปักไว้อัตโนมัติก่อนหน้าข้อความที่มีคลาส note */
         }
     </style>
 </head>
@@ -63,7 +87,8 @@
                 <li> H5 – ใช้น้อย แต่เน้นล าดับข้อมูล</li>
                 <li> H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
             </ul>
-            <p class="note" style="border-left: 4px solid red">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+            <p class="note" style="border-left: 4px solid red">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO
+                และโครงสร้างเอกสาร</p>
         </div>
         <div class="card">
             <h2>2. ตัวอย่างการใช ้H1–H6</h2>
@@ -84,7 +109,9 @@
             <h5>H5: Example Code</h5>
             <h6>H6: Note about heading size</h6>
         </div>
-        <a href="index.html"><p style="text-align: right;">Back to home</p></a>
+        <a href="index.html">
+            <p style="text-align: right;">Back to home</p>
+        </a>
     </div>
 
 

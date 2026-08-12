@@ -8,128 +8,238 @@
     <style>
         * {
             box-sizing: border-box;
+            /* บังคับให้ขนาดความกว้างและความสูงรวม padding และ border เข้าไปในตัว ไม่ให้ขนาดล้น */
             margin: 0;
+            /* ล้างค่าระยะขอบนอกเริ่มต้นทั้งหมดของทุกแท็ก */
             padding: 0;
+            /* ล้างค่าระยะขอบในเริ่มต้นทั้งหมดของทุกแท็ก */
         }
+
         body {
             font-family: Arial, sans-serif;
+            /* กำหนดฟอนต์หลักเป็น Arial ถ้าไม่มีใช้ sans-serif */
             background-color: rgb(120, 117, 167);
+            /* สีพื้นหลังของหน้าเว็บเป็นสีม่วงหม่น */
             line-height: 1.6;
+            /* ระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
         }
 
         .header {
-            background: linear-gradient(to right, #7472d1,#4a37f3);
+            background: linear-gradient(to right, #7472d1, #4a37f3);
+            /* ทำพื้นหลังไล่ระดับสี (Gradient) จากซ้ายไปขวา */
             text-align: center;
+            /* จัดข้อความให้อยู่กึ่งกลาง */
             padding: 20px;
+            /* เว้นระยะด้านใน 20 พิกเซล */
             color: white;
+            /* ตัวอักษรสีขาว */
         }
+
         .header a {
             color: white;
+            /* ตัวอักษรลิงก์ข้างใน header เป็นสีขาว */
             text-decoration: none;
+            /* เอาเส้นใต้ออก */
             font-weight: bold;
+            /* ทำตัวอักษรหนา */
         }
+
         .container {
             max-width: 1200px;
+            /* จำกัดความกว้างสูงสุดของคอนเทนเนอร์ไม่เกิน 1200 พิกเซล */
             margin: 0 auto;
+            /* จัดกึ่งกลางแนวนอนอัตโนมัติ */
         }
+
         .hero {
             padding: 50px 50px;
+            /* เว้นระยะด้านใน 50 พิกเซล ทั้งบน-ล่าง และซ้าย-ขวา */
         }
+
         .hero h1 {
             color: rgb(20, 45, 103);
+            /* สีหัวข้อ h1 เป็นสีน้ำเงินเข้ม */
             font-size: 48px;
+            /* ขนาดตัวอักษรใหญ่พิเศษ 48 พิกเซล */
         }
 
         .hero p {
             color: rgb(53, 62, 88);
+            /* สีข้อความย่อหน้าเป็นสีเทาอมน้ำเงิน */
             font-size: 22px;
+            /* ขนาดตัวอักษร 22 พิกเซล */
         }
 
         .tag-color {
             color: rgb(18, 26, 137);
-            font-weight: bold;  
+            /* สีตัวอักษรสำหรับแท็กพิเศษ */
+            font-weight: bold;
+            /* ตัวหนา */
         }
 
         .text-center {
             text-align: center;
+            /* คลาสสำเร็จรูปสำหรับจัดข้อความกึ่งกลาง */
         }
 
         .card {
             background-color: rgb(255, 255, 255);
+            /* สีพื้นหลังการ์ดเป็นสีขาว */
             border-radius: 15px;
+            /* ทำมุมโค้งมนของการ์ด 15 พิกเซล */
             box-shadow: 0 4px 8px rgba(101, 93, 93, 0.521);
+            /* ใส่เงาให้กับการ์ด */
             margin-bottom: 20px;
-
+            /* เว้นระยะห่างด้านล่าง 20 พิกเซล */
             overflow: hidden;
+            /* ซ่อนเนื้อหาที่ล้นขอบโค้งของการ์ด */
             border: 1px solid blue;
+            /* ขอบการ์ดสีน้ำเงิน หนา 1 พิกเซล */
         }
 
         .card-header {
             background-color: rgb(141, 148, 194);
+            /* สีพื้นหลังส่วนหัวของการ์ด */
             color: rgb(30, 0, 255);
+            /* สีตัวอักษรน้ำเงิน */
             font-size: 20px;
+            /* ขนาดตัวอักษร 20 พิกเซล */
             font-weight: bold;
+            /* ตัวหนา */
             padding: 40px;
+            /* เว้นระยะด้านในส่วนหัว 40 พิกเซล */
         }
 
         .card-body {
             padding: 40px;
+            /* เว้นระยะด้านในส่วนเนื้อหาการ์ด 40 พิกเซล */
         }
 
         .card-margin-bt {
             margin-bottom: 15px;
+            /* เพิ่มระยะห่างด้านล่าง 15 พิกเซล */
         }
 
         .label {
             padding: 4px 6px;
+            /* เว้นระยะขอบในของป้ายกำกับ (Label) */
             border-radius: 7px;
+            /* มุมโค้งมน 7 พิกเซล */
             color: white;
+            /* ตัวอักษรสีขาว */
             font-weight: bold;
+            /* ตัวหนา */
             text-align: center;
+            /* จัดข้อความกึ่งกลาง */
         }
-        .h1-label {background-color:red;}
-        .h2-label {background-color:rgb(38, 0, 255);}
-        .h3-label {background-color:rgb(72, 255, 0);}
-        .h4-label {background-color:red;}
-        .h5-label {background-color:rgb(255, 81, 0);}
-        .h6-label {background-color:rgb(255, 174, 0);}
+
+        .h1-label {
+            background-color: red;
+        }
+
+        /* ป้ายสีแดง */
+        .h2-label {
+            background-color: rgb(38, 0, 255);
+        }
+
+        /* ป้ายสีน้ำเงิน */
+        .h3-label {
+            background-color: rgb(72, 255, 0);
+        }
+
+        /* ป้ายสีเขียว */
+        .h4-label {
+            background-color: red;
+        }
+
+        /* ป้ายสีแดง */
+        .h5-label {
+            background-color: rgb(255, 81, 0);
+        }
+
+        /* ป้ายสีส้ม */
+        .h6-label {
+            background-color: rgb(255, 174, 0);
+        }
+
+        /* ป้ายสีเหลืองทอง */
+
         pre {
             background-color: rgb(0, 0, 0);
+            /* พื้นหลังบล็อกโค้ดสีดำ */
             color: rgb(255, 255, 255);
+            /* ตัวอักษรสีขาว */
             padding-top: 10px;
+            /* เว้นระยะด้านบน 10 พิกเซล */
             font-size: 16px;
+            /* ขนาดตัวอักษร 16 พิกเซล */
             border-radius: 10px;
+            /* มุมโค้งมน 10 พิกเซล */
         }
 
         .text-shade {
             padding: 20px;
+            /* เว้นระยะด้านใน 20 พิกเซล */
             background-color: rgb(104, 106, 144);
+            /* พื้นหลังสีเทาอมม่วง */
             border-radius: 10px;
+            /* มุมโค้งมน 10 พิกเซล */
             margin-top: 20px;
+            /* เว้นระยะด้านบน 20 พิกเซล */
         }
 
-        .text-shade h1 {color: rgb(255, 124, 1);}
-        .text-shade h2 {color: rgb(255, 131, 15);}
-        .text-shade h3 {color: rgb(255, 149, 50);}
-        .text-shade h4 {color: rgb(241, 161, 86);}
-        .text-shade h5 {color: rgb(249, 182, 120);}
-        .text-shade h6 {color: rgb(252, 207, 165);}
+        /* ปรับสีหัวข้อ h1 ถึง h6 ภายในคลาส .text-shade ให้มีเฉดสีส้มไล่ระดับ */
+        .text-shade h1 {
+            color: rgb(255, 124, 1);
+        }
+
+        .text-shade h2 {
+            color: rgb(255, 131, 15);
+        }
+
+        .text-shade h3 {
+            color: rgb(255, 149, 50);
+        }
+
+        .text-shade h4 {
+            color: rgb(241, 161, 86);
+        }
+
+        .text-shade h5 {
+            color: rgb(249, 182, 120);
+        }
+
+        .text-shade h6 {
+            color: rgb(252, 207, 165);
+        }
+
         .note {
             color: #161f9b;
+            /* สีตัวอักษรน้ำเงินเข้ม */
             background-color: rgb(93, 133, 243);
+            /* พื้นหลังสีฟ้า */
             padding: 10px 20px;
+            /* เว้นระยะขอบใน บน-ล่าง 10px, ซ้าย-ขวา 20px */
         }
+
         .note::before {
             content: "📌";
+            /* เติมอีโมจิหมุดปักอัตโนมัติหน้าข้อความคลาส note */
         }
-         .tip-box {
-            background-color: rgb(203, 209, 91);
-            border-radius: 10px;
-            border: 1px solid rgb(255, 230, 1);
-            box-shadow: 0 4px 8px rgb(159, 158, 150);
 
+        .tip-box {
+            background-color: rgb(203, 209, 91);
+            /* พื้นหลังกล่องคำแนะนำสีเหลืองอมเขียว */
+            border-radius: 10px;
+            /* มุมโค้งมน 10 พิกเซล */
+            border: 1px solid rgb(255, 230, 1);
+            /* ขอบสีเหลืองสด */
+            box-shadow: 0 4px 8px rgb(159, 158, 150);
+            /* ใส่เงาให้กล่อง */
             margin-bottom: 20px;
+            /* เว้นระยะด้านล่าง 20 พิกเซล */
             padding: 20px;
+            /* เว้นระยะด้านใน 20 พิกเซล */
         }
     </style>
 </head>
@@ -143,7 +253,8 @@
     <div class="container">
         <div class="hero">
             <h1>Workshop: HTML Heading</h1>
-            <p>ฝึกใช้แท็ก <span class="tag-color">&lt;h1></span> <span class="tag-color">– &lt;h6></span> และการปรับขนาดหัวข้อด้วย CSS</p>
+            <p>ฝึกใช้แท็ก <span class="tag-color">&lt;h1></span> <span class="tag-color">– &lt;h6></span>
+                และการปรับขนาดหัวข้อด้วย CSS</p>
         </div>
         <!-- card1 -->
         <div class="card">
@@ -152,13 +263,16 @@
             </div>
             <div class="card-body">
                 <p class="card-margin-bt">HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
-                    <p class="card-margin-bt"> <span class="label h1-label">H1</span> - หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</p>
-                    <p class="card-margin-bt"> <span class="label h2-label">H2</span> - หัวข้อรอง แบ่ง Section ของเนื้อหา</p>
-                    <p class="card-margin-bt"> <span class="label h3-label">H3</span> -  หัวข้อย่อยภายใน H2</p>
-                    <p class="card-margin-bt"> <span class="label h4-label">H4</span> - ย่อยลงไปอีกระดับ</p>
-                    <p class="card-margin-bt"> <span class="label h5-label">H5</span> - ใช้น้อย แต่เน้นล าดับข้อมูล</p>
-                    <p class="card-margin-bt"> <span class="label h6-label">H6</span> - เล็กสุด ใช้กับหัวข้อระดับลึก</p>
-                <p class="note" style="border-left: 4px solid red">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+                <p class="card-margin-bt"> <span class="label h1-label">H1</span> - หัวข้อใหญ่สุด
+                    ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</p>
+                <p class="card-margin-bt"> <span class="label h2-label">H2</span> - หัวข้อรอง แบ่ง Section ของเนื้อหา
+                </p>
+                <p class="card-margin-bt"> <span class="label h3-label">H3</span> - หัวข้อย่อยภายใน H2</p>
+                <p class="card-margin-bt"> <span class="label h4-label">H4</span> - ย่อยลงไปอีกระดับ</p>
+                <p class="card-margin-bt"> <span class="label h5-label">H5</span> - ใช้น้อย แต่เน้นล าดับข้อมูล</p>
+                <p class="card-margin-bt"> <span class="label h6-label">H6</span> - เล็กสุด ใช้กับหัวข้อระดับลึก</p>
+                <p class="note" style="border-left: 4px solid red">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO
+                    และโครงสร้างเอกสาร</p>
             </div>
         </div>
         <!-- card2 -->
@@ -189,10 +303,11 @@
         </div>
         <!-- card3 -->
         <div class="tip-box">
-             <p><b>Tip:</b> Use only one &lt;h1> per page - it represents the main topic or title.</p>
-            <p><strong>Note:</strong> Use HTML headings for headings only. Don't use headings to make text BIG or bold.</p>
+            <p><b>Tip:</b> Use only one &lt;h1> per page - it represents the main topic or title.</p>
+            <p><strong>Note:</strong> Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+            </p>
         </div>
-        
+
     </div>
 
 

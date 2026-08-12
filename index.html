@@ -10,61 +10,79 @@
     <style>
         html {
             scroll-behavior: smooth;
-
+            /* ทำให้เวลาคลิกลิงก์ภายในหน้า เลื่อนหน้าจออย่างนุ่มนวล */
         }
 
         body {
             font-family: Arial, sans-serif;
+            /* กำหนดฟอนต์หลักเป็น Arial */
             background-color: #9ed358;
+            /* สีพื้นหลังหน้าเว็บเป็นสีเขียวอ่อน */
             margin: 50px;
-
+            /* เว้นระยะขอบรอบหน้าจอ 50 พิกเซล */
             line-height: 1.5;
+            /* ระยะห่างระหว่างบรรทัด */
         }
 
         .main {
             max-width: 700px;
+            /* จำกัดความกว้างสูงสุดของคอนเทนเนอร์ 700 พิกเซล */
             margin: 0 auto;
+            /* จัดให้อยู่กึ่งกลางหน้าจอแนวนอน */
         }
 
         .main pre {
             background-color: #ffffff;
+            /* พื้นหลังแท็ก pre ใน .main เป็นสีขาว */
             color: #222222;
+            /* สีตัวอักษรสีเทาเข้ม */
             border: 2px solid #5b8ad4;
+            /* กรอบเส้นทึบสีฟ้า หนา 2 พิกเซล */
             padding: 25px;
+            /* เว้นระยะด้านใน 25 พิกเซล */
             margin-top: 15px;
-
+            /* เว้นระยะด้านบน 15 พิกเซล */
             white-space: pre-wrap;
+            /* ตัดข้อความยาวไม่ให้ล้นออกนอกกรอบ */
             font-size: 16px;
+            /* ขนาดตัวอักษร 16 พิกเซล */
         }
 
         h1,
         h2 {
             color: rgb(194, 78, 78);
+            /* สีหัวข้อ h1 และ h2 เป็นโทนสีแดง */
             text-align: center;
+            /* จัดหัวให้อยู่กึ่งกลาง */
         }
 
         ul,
         pre {
             color: rgb(55, 55, 160);
+            /* สีตัวอักษรของ ul และ pre เป็นสีน้ำเงินเข้ม */
             background-color: aliceblue;
+            /* พื้นหลังสีฟ้าอ่อนมากๆ */
             padding: 10px;
-            border-le: 5px solid rgb(34, 121, 148);
-
-
+            /* เว้นระยะด้านใน 10 พิกเซล */
+            border-left: 5px solid rgb(34, 121, 148);
+            /* แถบเส้นขอบซ้ายหนา 5 พิกเซล */
         }
 
         a {
             text-decoration: none;
+            /* เอาเส้นใต้ลิงก์ออก */
         }
 
         a:hover {
             text-decoration: underline;
+            /* แสดงเส้นใต้เมื่อเอาเมาส์ชี้ */
             color: #a1b94ae7;
+            /* เปลี่ยนสีลิงก์เป็นเขียวอมเหลืองเมื่อเอาเมาส์ชี้ */
         }
 
         .text-center {
             text-align: center;
-
+            /* คลาสสำเร็จรูปสำหรับจัดข้อความกึ่งกลาง */
         }
     </style>
 </head>
