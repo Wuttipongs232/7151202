@@ -1,231 +1,247 @@
 * {
-    margin: 0;
-    /* ล้างระยะขอบนอกเริ่มต้นทั้งหมดของทุกแท็ก */
-    padding: 0;
-    /* ล้างระยะขอบในเริ่มต้นทั้งหมดของทุกแท็ก */
-    box-sizing: border-box;
-    /* บังคับให้ขนาดความกว้างและความสูงรวม padding และ border ไว้ในตัว */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Kanit, Arial, Helvetica, sans-serif;
-    /* กำหนดฟอนต์หลักเป็น Kanit และสำรองด้วย Arial/sans-serif */
-    background-color: beige;
-    /* สีพื้นหลังหน้าเว็บเป็นสีเบจ */
-    color: rgb(48, 47, 47);
-    /* สีตัวอักษรหลักเป็นสีเทาเข้ม */
-    line-height: 1.6;
-    /* ระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
+  font-family: Kanit, Arial, Helvetica, sans-serif;
+  background-color: beige;
+  color: rgb(48, 47, 47);
+  line-height: 1.6;
 }
 
 .container {
-    /* (คลาสคอนเทนเนอร์นี้ถูกคอมเมนต์ค่าไว้ ยังไม่ได้ใช้งานจริง) */
-    /* border: 1px solid rgb(56, 62, 148);
-    padding: 15px;
-    margin: 15px; */
 }
 
 /* header section */
 .site-header {
-    /* (มีโค้ดถูกคอมเมนต์ไว้บางส่วน) */
-    display: flex;
-    /* จัดเรียงส่วนหัวเว็บแบบ Flexbox */
-    justify-content: space-between;
-    /* กระจายเนื้อหาชิดซ้ายและขวา */
-    align-items: center;
-    /* จัดกึ่งกลางแนวตั้ง */
-    background: linear-gradient(110deg, rgb(53, 8, 216), rgb(145, 114, 230));
-    /* พื้นหลังไล่ระดับสีน้ำเงิน-ม่วง มุม 110 องศา */
-    padding: 8px 20px;
-    /* เว้นระยะด้านใน บน-ล่าง 8px และ ซ้าย-ขวา 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(110deg, rgb(53, 8, 216), rgb(145, 114, 230));
+  padding: 8px 20px;
 }
 
 .brand {
-    padding: 15px;
-    /* เว้นระยะด้านใน 15 พิกเซล */
-    margin: 15px;
-    /* เว้นระยะขอบนอก 15 พิกเซล */
-    color: antiquewhite;
-    /* สีตัวอักษรแบรนด์เป็นสีขาวครีม */
-    display: flex;
-    /* จัดเรียงโลโก้และข้อความแบรนด์แนวนอน */
-    align-items: center;
-    /* จัดกึ่งกลางแนวตั้ง */
-    gap: 20px;
-    /* ระยะห่างระหว่างโลโก้กับข้อความ 20 พิกเซล */
+  padding: 15px;
+  margin: 15px;
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .brand-logo {
-    background-color: rgb(103, 171, 216);
-    /* พื้นหลังโลโก้สีฟ้าอ่อน */
-    border-radius: 50%;
-    /* ทำเป็นรูปวงกลม */
-    font-size: 30px;
-    /* ขนาดไอคอนโลโก้ 30 พิกเซล */
-    width: 55px;
-    /* ความกว้าง 55 พิกเซล */
-    height: 55px;
-    /* ความสูง 55 พิกเซล */
-    display: flex;
-    /* จัดกึ่งกลางไอคอนด้วย Flexbox */
-    justify-content: center;
-    /* จัดกึ่งกลางแนวนอน */
-    align-items: center;
-    /* จัดกึ่งกลางแนวตั้ง */
+  background-color: rgb(103, 171, 216);
+  border-radius: 50%;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brand-text h2 {
-    font-size: 24px;
-    /* ขนาดหัวข้อแบรนด์ 24 พิกเซล */
+  font-size: 24px;
 }
 
 .brand-text p {
-    font-size: 14px;
-    /* ขนาดข้อความย่อหน้าแบรนด์ 14 พิกเซล */
-    opacity: 0.7;
-    /* ปรับความโปร่งใสลงเล็กน้อยให้ดูจางลง */
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 /* navbar */
 .main-nav {
-    /* (โค้ดขอบถูกคอมเมนต์ไว้) */
-    padding: 15px;
-    /* เว้นระยะด้านใน 15 พิกเซล */
-    margin: 15px;
-    /* เว้นระยะขอบนอก 15 พิกเซล */
+  padding: 15px;
+  margin: 15px;
 }
 
 .nav-list {
-    list-style-type: none;
-    /* เอาจุดสัญลักษณ์รายการออก */
-    display: flex;
-    /* จัดเรียงเมนูแนวนอน */
-    justify-content: center;
-    /* จัดกึ่งกลางแนวนอน */
-    align-items: center;
-    /* จัดกึ่งกลางแนวตั้ง */
-    gap: 20px;
-    /* ระยะห่างระหว่างลิงก์เมนู 20 พิกเซล */
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-list a {
-    color: rgb(252, 252, 252);
-    /* ลิงก์เมนูสีขาวเกือบสว่าง */
-    text-decoration: none;
-    /* เอาเส้นใต้ลิงก์ออก */
-    padding: 8px 15px;
-    /* เว้นระยะด้านในปุ่มลิงก์ */
-    border-radius: 8px;
-    /* ทำมุมโค้งมนปุ่มลิงก์ 8 พิกเซล */
-    transition: 2s;
-    /* เอฟเฟกต์การเปลี่ยนค่าใช้เวลา 2 วินาที */
+  color: rgb(252, 252, 252);
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 2s;
 }
 
 .nav-list a:hover {
-    background-color: aliceblue;
-    /* เปลี่ยนสีพื้นหลังเป็นฟ้าอ่อนเมื่อเอาเมาส์ชี้ */
+  background-color: aliceblue;
 }
 
 /* main section */
 .main-layout {
-    /* (โค้ดขอบถูกคอมเมนต์ไว้) */
-    display: grid;
-    /* จัดเรียงโครงสร้างหลักแบบ Grid */
-    grid-template-columns: 1fr 390px;
-    /* แบ่งเป็น 2 คอลัมน์: คอลัมน์แรกยืดหยุ่น (1fr) และคอลัมน์ขวาคงที่ 390 พิกเซล */
-    padding: 20px 22px;
-    /* เว้นระยะด้านใน 20px และ 22px */
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  padding: 20px 22px;
 }
 
-/* left content */
 .left-content {
-    /* (โค้ดขอบและ padding/margin ถูกคอมเมนต์ไว้ทั้งหมด) */
 }
 
 .hero {
-    display: grid;
-    /* จัดโครงสร้างภายในฮีโร่แบบ Grid */
-    grid-template-columns: 1.5fr 0.8fr;
-    /* แบ่ง 2 คอลัมน์ ฝั่งข้อความกว้าง 1.5 ส่วน ฝั่งรูปภาพกว้าง 0.8 ส่วน */
-    padding: 26px 36px;
-    /* เว้นระยะด้านใน 26px และ 36px */
-    background: linear-gradient(90deg, rgb(197, 199, 212), rgb(16, 16, 117));
-    /* พื้นหลังไล่ระดับสีเทาเงินไปน้ำเงินเข้ม */
-    border-radius: 15px;
-    /* มุมโค้งมน 15 พิกเซล */
-    box-shadow: 0px 4px 8px black;
-    /* ใส่เงาสีดำให้กล่อง */
-    margin-top: 20px;
-    /* เว้นระยะด้านบน 20 พิกเซล */
-    /* (หมายเหตุ: มีคำสั่ง box-shadow ซ้ำซ้อนด้านล่าง) */
-    align-items: center;
-    /* จัดเนื้อหาแนวตั้งให้อยู่กึ่งกลาง */
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  
+  background: linear-gradient(90deg, rgb(197, 199, 212), rgb(16, 16, 117));
+  padding: 26px 36px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgb(124, 123, 123);
+  margin-top: 20px;
+  align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 36px;
-    /* ขนาดหัวข้อฮีโร่ 36 พิกเซล */
+  font-size: 36px;
+  color: rgb(21, 21, 83);
 }
 
 .hero-text p {
-    font-size: 24px;
-    /* (แก้ไขค่าที่พิมพ์ตกหล่นจาก 24[px] เป็น 24px) ขนาดตัวอักษรย่อหน้าฮีโร่ 24 พิกเซล */
+  font-size: 24px;
+  color: rgb(21, 21, 83);
 }
 
 .hero-photo img {
-    width: 400px;
-    /* กำหนดความกว้างรูปภาพ 400 พิกเซล */
-    height: 200px;
-    /* กำหนดความสูงรูปภาพ 200 พิกเซล */
-    border: 3px solid rgb(46, 44, 150);
-    /* กรอบรูปภาพสีน้ำเงินเข้ม หนา 3 พิกเซล */
-    border-radius: 10px;
-    /* มุมโค้งมนรูปภาพ 10 พิกเซล */
-    object-fit: cover;
-    /* ครอปภาพให้เต็มกล่องโดยรักษาสัดส่วนเดิม */
-    box-shadow: 0 4px 8px rgb(77, 77, 77);
-    /* ใส่เงาให้รูปภาพ */
-
-    /* โน้ตคำอธิบายคำสั่ง object-fit:
-    - object-fit: contain ➡️ เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
-    - object-fit: fill ➡️ ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
-    - object-fit: cover ➡️ ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
-    */
+  width: 400px;
+  height: 200px;
+  border: 3px solid rgb(46, 44, 150);
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgb(77, 77, 77);
 }
+
+/* link example */
 
 .card {
-    border: 1px solid rgb(31, 76, 160);
-    /* กรอบการ์ดสีน้ำเงิน */
-    padding: 15px;
-    /* เว้นระยะด้านใน 15 พิกเซล */
-    margin: 15px;
-    /* เว้นระยะขอบนอก 15 พิกเซล */
+  /* border: 1px solid rgb(31, 76, 160); */
+  padding: 26px 36px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgb(124, 123, 123);
+  background-color: white;
+  border: 1pz solid rgb(117, 130, 247);
+  border-radius: 15px;
+  margin-top: 20px;
 }
+
+.card-header-title {
+  
+
+}
+.card-header-title h2{
+  color: rgb(21, 21, 83);
+}
+.card-body-grid {
+display: grid;
+grid-template-columns: 0.75fr 1.25fr;
+gap: 20px;
+}
+/* กล่องลิ้งด้านซ้าย */
+.result-panel,.code-panel {
+border: 1px solid rgb(90, 20, 219);
+border-radius: 10px;
+
+overflow: hidden;
+
+}
+
+.result-panel-header,.code-panel-header {
+  color: rgb(21, 21, 83);
+  background-color: rgb(145, 146, 255);
+  padding: 0px 20px;
+  font-weight: bold;
+}
+.result-panel-body {
+  line-height: 2;
+
+   padding: 5px 20px 20px 20px;
+
+}
+.result-panel-emoji{
+  background-color: rgb(21, 21, 109);
+  border-radius: 4px;
+  margin-right: 10px;
+
+}
+
+.result-panel-body a{
+ display: block;
+
+ color: rgb(48, 48, 177);
+}
+.result-panel-body a:hover{
+ color: rgb(139, 38, 52);
+}
+
+.back-btn {
+  border: 2px solid rgb(35, 40, 116);
+  border-radius: 10px;
+
+  display: inline-block !important;
+  padding: 0 20px;
+  text-decoration: none;
+}
+/* โค้ดด้านขวา */
+.code-panel {
+  background-color: black;
+  color: white;
+}
+
+.code-panel-body {
+
+
+}
+.code-list {
+  padding: 16px 20px;
+}
+.code-list li {
+  padding: 0 20px;
+}
+
+.tag {
+  color: red;
+}
+.attr {color: greenyellow;}
+.value {color: green;}
+
+/* Image example */
+.result-panel-body-3g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  
+  align-items: baseline;
+  text-align: center;
+  font-size: 14px;
+
+  padding: 0 20px;
+}
+
 
 /* right side bar */
 .right-sidebar {
-    border: 1px solid rgb(31, 76, 160);
-    /* กรอบแถบด้านขวาสีน้ำเงิน */
-    padding: 15px;
-    /* เว้นระยะด้านใน 15 พิกเซล */
-    margin: 15px;
-    /* เว้นระยะขอบนอก 15 พิกเซล */
+  border: 1px solid rgb(31, 76, 160);
+  padding: 15px;
+  margin: 15px;
 }
 
 .side_cerd {
-    /* (ยังไม่มีการกำหนดสไตล์ CSS ข้างใน) */
 }
 
 .submit-card {
-    /* (ยังไม่มีการกำหนดสไตล์ CSS ข้างใน) */
 }
 
 /* footer section */
 .tip-box {
-    border: 1px solid red;
-    /* กรอบกล่องข้อความแนะนำสีแดง */
-    padding: 15px;
-    /* เว้นระยะด้านใน 15 พิกเซล */
-    margin: 15px;
-    /* เว้นระยะขอบนอก 15 พิกเซล */
+  border: 1px solid red;
+  padding: 15px;
+  margin: 15px;
 }
