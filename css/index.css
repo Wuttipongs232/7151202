@@ -1,0 +1,231 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', Kanit, Arial, sans-serif;
+    background-color: #f4f6fc;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+}
+
+/* main section layout */
+.main-layout {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Card */
+.header1 {
+    background: linear-gradient(135deg, #7c6cf0, #5b4bc4);
+    padding: 36px 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(91, 75, 196, 0.15);
+}
+
+.header-text h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.header-text p {
+    font-size: 16px;
+    color: #f0f3ff;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+
+.content-grid .card {
+    margin-top: 0;
+    height: 100%;
+}
+
+
+
+/* card & content */
+.card {
+    padding: 28px 32px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+    border: 1px solid #e6e8f5;
+    scroll-margin-top: 30px;
+    /* เวลาคลิ้กจะล็อคขอบบนกล่องว่าางไว้หน่อยนึงไม่ชิดบราวเซอร์ */
+    border: 1px solid #5b4bc4;
+}
+
+.card-header-title h2 {
+    color: #2d3436;
+    font-size: 20px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.card-header-title h3 {
+    color: #636e72;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.topics-grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ล็อกความสูงกล่อง li ให้เท่ากันทุกช่องในแถว */
+.topics-grid-list li {
+    display: flex;
+}
+
+.topics-grid-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    padding: 10px 18px;
+    background-color: #bdb3fc;
+    color: #475569;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.25s ease;
+}
+
+/* เอฟเฟกต์ตอนชี้เมาส์ */
+.topics-grid-list li a:hover {
+    background-color: #5b4bc4;
+    color: #ffffff;
+    border-color: #5b4bc4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(91, 75, 196, 0.25);
+}
+
+/* ปุ่มworkshop */
+.back-btn {
+    border: none;
+    background-color: #e0e7ff;
+    color: #5b4bc4 !important;
+    border-radius: 8px;
+    display: inline-block !important;
+    padding: 6px 16px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    margin-right: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #5b4bc4;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* กล่องฟ้อนโค้ด */
+.code-list {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    margin-top: 10px;
+    border-left: 4px solid #7c6cf0;
+}
+
+/* ปุ่มย้อนกลับ */
+.floating-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #5b4bc4;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(91, 75, 196, 0.3);
+    text-decoration: none;
+}
+
+.floating-top:hover {
+    background-color: #4a3cb3;
+}
+
+/* footer */
+.site-footer {
+    background-color: #bebaee;
+    text-align: center;
+    padding: 40px 20px;
+    color: #2a3144;
+    font-size: 14px;
+}
+
+.site-footer a {
+    color: #5b4bc4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header1 {
+        padding: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .topics-grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
