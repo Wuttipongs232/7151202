@@ -12,13 +12,11 @@ html {
 body {
     background: linear-gradient(135deg,
             white 0%,
-            rgb(38, 37, 124) 50%,
-            rgb(5, 3, 114) 100%, );
+            rgb(127, 126, 199) 30%,
+            rgb(89, 88, 165) 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-
-
 }
 
 .container {
@@ -28,7 +26,7 @@ body {
 
 :root {
     /* สีหลักเว็ป */
-    --primary-color: rgb(74, 112, 236);
+    --primary-color: rgb(40, 66, 148);
     --primary-dark-color: rgb(45, 63, 121);
     --secondary-color: rgb(197, 111, 223);
 
@@ -40,20 +38,33 @@ body {
     --light-text-color: rgb(245, 245, 250);
 
 
-
-
-
     /* สีพื้น */
-    --btn-bg-color: rgb(85, 100, 196);
+    --btn-bg-color: rgb(111, 124, 209);
     --footer-bg-color: rgb(29, 30, 31);
-
-
+    --light-bg-color: rgb(255, 255, 255);
     /* สีเงา */
     --header-shadow: 0 4px 8px rgb(196, 192, 192);
     --card-shadow: 0 3px 8px rgb(219, 216, 216);
 
     /* สีขอบ */
     --border-color: rgb(185, 185, 185);
+
+    /* สีกล่องคำแนะนำ */
+    /*  ฟ้า */
+    --card-blue-bg: #e8f1ff;
+    --card-blue-title: #1e3a8a;
+
+    /*  ม่วง */
+    --card-purple-bg: #f5e8ff;
+    --card-purple-title: #581c87;
+
+    /* เขียว  */
+    --card-green-bg: #e2f9eb;
+    --card-green-title: #064e3b;
+
+    /*  ส้ม */
+    --card-orange-bg: #fff3df;
+    --card-orange-title: #7c2d12;
 
 }
 
@@ -140,6 +151,7 @@ nav a.active {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .pet-card {
@@ -176,6 +188,84 @@ nav a.active {
 
 .breed {
     color: var(--mute-text-color);
+}
+
+
+/* tipbox */
+.info-section {
+    margin: 1.5rem;
+    padding: 32px 24px;
+    background-color: var(--light-bg-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* หัวข้อใหญ่ */
+.info-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-dark-color);
+    margin-bottom: 24px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.info-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.info-card p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--mute-text-color);
+}
+
+/* 1. การ์ดสีฟ้า */
+.info-blue {
+    background-color: var(--card-blue-bg);
+}
+.info-blue h3 {
+    color: var(--card-blue-title);
+}
+
+/* 2. การ์ดสีม่วง */
+.info-purple {
+    background-color: var(--card-purple-bg);
+}
+.info-purple h3 {
+    color: var(--card-purple-title);
+}
+
+/* 3. การ์ดสีเขียว */
+.info-green {
+    background-color: var(--card-green-bg);
+}
+.info-green h3 {
+    color: var(--card-green-title);
+}
+
+/* 4. การ์ดสีส้ม */
+.info-orange {
+    background-color: var(--card-orange-bg);
+}
+.info-orange h3 {
+    color: var(--card-orange-title)tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt;
 }
 
 
