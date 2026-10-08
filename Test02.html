@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test02-055</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', 'Prompt', sans-serif, Arial;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #b6cadd;
+            color: #333333;
+        }
+
+        /* Container สำหรับคุมความกว้างแม่-ลูก */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+        }
+
+        .navbar {
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            /* จัดตำแหน่งซ้าย-ขวา */
+            align-items: center;
+            /* จัดกึ่งกลางแนวตั้ง */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: #38bdf8;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+
+
+        /* การ์ดซ้าย */
+        .card-left {}
+
+        .left-main1 {
+            background: #afb8c9;
+            /* width: 300px; */
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+
+        }
+
+        /* ปุ่มทั้งหมด */
+        .btn-full-width {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+
+        /* การ์ดขวา */
+        .card-right {
+            padding: 20px;
+            /* margin: 20px; */
+
+        }
+
+        .main2 {
+            margin-bottom: 20px;
+            border-radius: 6px;
+            background-color: #dbe7e3;
+            padding: 1rem;
+
+
+        }
+
+        .form-section {
+            padding: 50px 0;
+        }
+
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-card h2 {
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        /* แบ่ง input text เป็น 2 คอลัมน์ */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+
+        .form-grid {
+            gap: 16px;
+            /* margin-bottom: 15px; */
+
+        }
+
+        .form-group label {
+            /* display: block; */
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        /* Input ยืดเต็มความกว้างลูก */
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            outline: none;
+            gap: 8px;
+        }
+
+        .form-input:focus {
+            border-color: #0284c7;
+        }
+
+        .radio-group {
+            margin: 15px 0;
+        }
+
+        .radio-option {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        /* card-sectionล่างขวา */
+        .card-section {
+            margin: auto;
+        }
+
+        .card-grid {
+            margin-top: 8px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 คอลัมน์บน Desktop */
+            gap: 20px;
+
+        }
+
+        .card-item {
+            /* background: white; */
+
+            border-radius: 8px;
+
+            /* max-width: 140px; */
+            overflow: hidden;
+
+        }
+
+        .card-item p {
+            background-color: white;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .card-item h3 {
+
+            color: #0f172a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .color-orange {
+            border-radius: 16px;
+            margin: 0 auto;
+            padding: 0;
+            /* border: 1px solid red; */
+            /* flex-shrink: 0; */
+        }
+
+        .color-orange h3 {
+            background-color: rgb(219, 193, 144);
+            margin: 0 auto;
+            color: rgb(206, 144, 30);
+            text-align: center;
+            padding: 32px;
+
+        }
+
+        .color-blue {
+            border-radius: 16px;
+            margin: 0 auto;
+            padding: 0;
+            /* border: 1px solid red; */
+            /* flex-shrink: 0; */
+        }
+
+        .color-blue h3 {
+            background-color: rgb(161, 167, 224);
+            margin: 0 auto;
+            color: rgb(73, 75, 206);
+            text-align: center;
+            padding: 32px;
+
+        }
+
+        .color-green {
+            border-radius: 16px;
+            margin: 0 auto;
+            padding: 0;
+            /* border: 1px solid red; */
+            /* flex-shrink: 0; */
+        }
+
+        .color-green h3 {
+            background-color: rgb(182, 238, 189);
+            margin: 0 auto;
+            color: rgb(10, 112, 15);
+            text-align: center;
+            padding: 32px;
+
+        }
+
+        /* ==============
+      footer
+=================*/
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+
+            padding-block: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        /* --- TABLET ) --- */
+        @media (max-width: 900x) {
+            .main-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 2fr;
+            }
+
+            .card-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .left-main1 {
+                background: #afb8c9;
+                width: 200px;
+                padding: 20px;
+                border-radius: 6px;
+                margin-top: 20px;
+
+            }
+
+        }
+
+        /* --- MOBILE  --- */
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                /* เมนูจัดเรียงแนวตั้ง */
+                gap: 15px;
+            }
+
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-content {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                /* การ์ดเหลือ 1 คอลัมน์ */
+            }
+
+            .footer-flex {
+                display: block;
+                justify-content: space-between;
+
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">SE068: Campus Activity</div>
+                <ul class="nav-menu">
+                    <li><a href="#hero">หน้าแรก</a></li>
+                    <li><a href="#form">กิจกรรม</a></li>
+                    <li><a href="#cards">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container main-content">
+        <section class="card-left">
+
+            <div class="left-main1">
+                <div class="main1-text">
+                    <h2>ค้นพบกิจกรรมใหม่ในรั้วมหาลัย</h2>
+                    <p>เติมประสบการณ์นอกห้องเรียนผ่านกิจกรรมสร้างสรรค์ พร้อมพบเพื่อนใหม่และพัฒนาทักษะที่คุณสนใจ</p>
+                </div>
+                <div class="btn-full-width">ดูกิจกรรมทั้งหมด</div>
+            </div>
+        </section>
+
+        <section class="card-right">
+
+            <div class="main2">
+                <h3>แจ้งความสนใจเรียน</h3>
+                <form action="">
+                    <div class="form-grid">
+                        <div class="form-row-2col">
+                            <div class="form-group">
+                                <label for="firstname">ชื่อ-นามสกุล</label>
+                                <input type="text" id="firstname" class="form-input" placeholder="ชื่อของคุณ" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">อีเมล:</label>
+                            <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="radio-group">
+                        <label>กิจกรรมที่สนใจ</label><br>
+                        <div class="radio-option">
+                            <input type="radio" id="opt1" name="choice" value="1" checked>
+                            <label for="opt1">ART</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="opt2" name="choice" value="2">
+                            <label for="opt2">SPORT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="opt3" name="choice" value="3">
+                            <label for="opt3">GREEN</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-full-width">ส่งข้อมูล </button>
+                </form>
+
+
+            </div>
+
+            <section id="cards" class="card-section">
+
+                <h2 style="text-align: left;">กิจกรรมที่แนะนำ</h2>
+                <div class="card-grid">
+                    <div class="card-item">
+                        <div class="color-orange">
+                            <h3>
+                                ART
+                            </h3>
+                        </div>
+                        <p>Creative Art Day</p>
+                    </div>
+                    <div class="card-item">
+                        <div class="color-blue">
+                            <h3>SPORT</h3>
+                        </div>
+                        <p>Campus Sports Day</p>
+                    </div>
+                    <div class="card-item">
+                        <div class="color-green">
+                            <h3>GREEN</h3>
+                        </div>
+                        <p>Green Campus Day</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+    </main>
+
+    <footer class=" footer-main">
+        <div class="container footer-flex">
+            <span class="text-body-secondary">@ 2026 SE068 : Campus Activity</span>
+            <p>วุฒิพงษ์ แซ่เจียม</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

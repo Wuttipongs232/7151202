@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,8 +41,10 @@
 
         .nav-container {
             display: flex;
-            justify-content: space-between; /* จัดตำแหน่งซ้าย-ขวา */
-            align-items: center;            /* จัดกึ่งกลางแนวตั้ง */
+            justify-content: space-between;
+            /* จัดตำแหน่งซ้าย-ขวา */
+            align-items: center;
+            /* จัดกึ่งกลางแนวตั้ง */
         }
 
         .logo {
@@ -76,7 +79,8 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* แบ่ง 2 คอลัมน์แม่ลูก */
+            grid-template-columns: 1fr 1fr;
+            /* แบ่ง 2 คอลัมน์แม่ลูก */
             gap: 30px;
             align-items: center;
         }
@@ -139,7 +143,7 @@
             background: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .form-card h2 {
@@ -196,7 +200,8 @@
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์บน Desktop */
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 คอลัมน์บน Desktop */
             gap: 20px;
             margin-top: 20px;
         }
@@ -205,7 +210,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .card-item h3 {
@@ -220,22 +225,26 @@
         /* --- TABLET (หน้าจอ <= 768px) --- */
         @media (max-width: 768px) {
             .hero-grid {
-                grid-template-columns: 1fr; /* ปรับเป็น 1 คอลัมน์ */
+                grid-template-columns: 1fr;
+                /* ปรับเป็น 1 คอลัมน์ */
             }
 
             .form-row-2col {
-                grid-template-columns: 1fr; /* ฟอร์มกลายเป็น 1 คอลัมน์ */
+                grid-template-columns: 1fr;
+                /* ฟอร์มกลายเป็น 1 คอลัมน์ */
             }
 
             .card-grid {
-                grid-template-columns: repeat(2, 1fr); /* การ์ดเหลือ 2 คอลัมน์ */
+                grid-template-columns: repeat(2, 1fr);
+                /* การ์ดเหลือ 2 คอลัมน์ */
             }
         }
 
         /* --- MOBILE (หน้าจอ <= 480px) --- */
         @media (max-width: 480px) {
             .nav-container {
-                flex-direction: column; /* เมนูจัดเรียงแนวตั้ง */
+                flex-direction: column;
+                /* เมนูจัดเรียงแนวตั้ง */
                 gap: 15px;
             }
 
@@ -245,11 +254,13 @@
             }
 
             .card-grid {
-                grid-template-columns: 1fr; /* การ์ดเหลือ 1 คอลัมน์ */
+                grid-template-columns: 1fr;
+                /* การ์ดเหลือ 1 คอลัมน์ */
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -270,7 +281,7 @@
             <div class="hero-text">
                 <h1>ฝึกทำ Layout และ CSS Control</h1>
                 <p>ตัวอย่างการแบ่ง section/div แม่-ลูก และใช้ Flexbox/Grid ควบคุม Responsive Design</p>
-                
+
                 <div>
                     <span class="btn-inline">ข้อความแบบ Inline</span>
                     <a href="#" class="btn-inline-block">ปุ่ม Inline-Block</a>
@@ -288,7 +299,7 @@
         <div class="container">
             <div class="form-card">
                 <h2>ฟอร์มลงทะเบียน</h2>
-                <form action="#">
+                <form action="">
                     <!-- แบ่ง 2 คอลัมน์บน Desktop / 1 คอลัมน์บน Tablet & Mobile -->
                     <div class="form-row-2col">
                         <div class="form-group">
@@ -346,4 +357,23 @@
     </section>
 
 </body>
+
 </html>
+<!-- 1. display: inline (ต่อแถวเรียงกัน)การจัดวาง: วางต่อกันในบรรทัดเดียว (เรียงแนวนอนซ้ายไปขวา) ไม่ขึ้นบรรทัดใหม่การปรับขนาด: ไม่สามารถ กำหนดความกว้าง (width) และความสูง (height) ได้ (ขนาดจะเท่ากับเนื้อหาข้างในพอดี)ระยะห่าง: กำหนด margin-top / margin-bottom (ระยะห่างแนวตั้ง) ไม่ได้แท็กที่เป็น inline โดยธรรมชาติ: <span>, <a>, <b>, <i>CSS/* ตัวอย่าง */
+.text-inline {
+    display: inline;
+}
+2. display: block (กินพื้นที่เต็มแถว)การจัดวาง: ขึ้นบรรทัดใหม่เสมอ (ตัดแถวลงมาข้างล่าง) และกินพื้นที่ความกว้างเต็ม 100% ของคอนเทนเนอร์แม่โดยอัตโนมัติการปรับขนาด: สามารถ กำหนด width และ height ได้ตามต้องการระยะห่าง: กำหนด margin และ padding ได้ครบทุกทิศทาง (บน, ล่าง, ซ้าย, ขวา)แท็กที่เป็น block โดยธรรมชาติ: <div>, <p>, <h1> - <h6>, <section>, <form>CSS/* ตัวอย่าง: ปุ่มยืดเต็มความกว้าง */
+.btn-block {
+    display: block;
+    width: 100%; /* ยืดเต็มแถว */
+    padding: 10px;
+}
+3. display: inline-block (ลูกผสม: ต่อแถวได้ + ปรับขนาดได้)การจัดวาง: วางต่อกันในบรรทัดเดียวกันแบบ inline (ไม่ขึ้นบรรทัดใหม่)การปรับขนาด: สามารถ กำหนด width, height, margin, และ padding ได้เหมือน blockประโยชน์: นิยมใช้ทำ ปุ่ม (Button) หรือ เมนู (Navbar) ที่ต้องการให้วางเรียงต่อกันในแนวนอน แต่ยังตั้งค่าขนาดปุ่มและระยะห่างรอบๆ ได้สวยงามCSS/* ตัวอย่าง: ปุ่มที่วางต่อกันแนวนอนได้ และตั้งขนาดได้ */
+.btn-custom {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    padding: 8px 15px;
+}
+ตารางเปรียบเทียบความแตกต่างคุณสมบัติinlineblockinline-blockการขึ้นบรรทัดใหม่ไม่ขึ้น (ต่อแถวเดิม)ขึ้นบรรทัดใหม่ไม่ขึ้น (ต่อแถวเดิม)ตั้งค่า width / heightไม่ได้ได้ได้ตั้งค่า margin บน-ล่างไม่ได้ได้ได้ความกว้างเริ่มต้นเท่าเนื้อหาข้างในเต็ม 100% ของแม่เท่าเนื้อหาข้างใน -->
